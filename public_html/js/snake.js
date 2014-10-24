@@ -49,7 +49,7 @@ function gameLoop() {
 }
 
 function gameDraw() {
-    context.fillStyle = "rgb(105, 157, 255)";
+    context.fillStyle = "rgb(147, 74, 148)";
     context.fillRect(0, 0, screenWidth, screenHeight);
 }  
 
@@ -60,7 +60,7 @@ function gameDraw() {
 
 function snakeInitialize() {
     snake = [];
-    snakeLength = 1;
+    snakeLength = 5;
     snakeSize = 20;
     snakeDirection = "down";
     
@@ -187,10 +187,6 @@ function checkWallCollisions(snakeHeadX, snakeHeadY) {
 
 function checkSnakeCollisions() {
     if(snakeHeadX == snakeBody && snakeHeadY == snakeBody) {
-        snake.push({
-            x:0,
-            y:0
-        });
-        snakeLength--;
+      console.log("snakeCollisions");
     }
 }
