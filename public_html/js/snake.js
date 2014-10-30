@@ -18,7 +18,7 @@ var gameOverMenu;
 var restartButton;
 var playHUD;
 var scoreboard;
-var startscreeen;
+var startscreen;
 
 
 /*-----------------------------------------------------------------------------
@@ -250,6 +250,14 @@ showMenu(state);
  * ----------------------------------------------------------------------------
  */
 
+function displayStartMenu(menu) {
+    menu.style.visibility = "visiible";
+}
+
+function hideStartMenu(menu) {
+    menu.style.visibility = "hidden";
+}
+
 
 function displayMenu(menu) {
     menu.style.visibility = "visible";
@@ -257,6 +265,12 @@ function displayMenu(menu) {
 
 function hideMenu(menu) {
     menu.style.visibility = "hidden";
+}
+
+function showStartMenu(state) {
+    if(state == "MAIN MENU") {
+        displayStartMenu(startscreen);
+    }
 }
 
 function showMenu(state){
@@ -275,6 +289,6 @@ function centerMenuPosition(menu) {
 }
 
 function drawScoreboard() {
-    scoreboard.innerHTML = "Length:" + snakeLength;
+    scoreboard.innerHTML = "Score:" + snakeLength;
 }
 

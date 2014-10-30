@@ -7,7 +7,7 @@ body {
     display: block;
 }  
 
-#gameOver,#playHUD{
+#gameOver,#playHUD,#start-page{
     position: absolute;
     visibility: hidden;
 }
@@ -19,7 +19,7 @@ h1, h2, h3 {
     
 }
 
-.title{
+.title, start-page{
     font-size: 50px;
 }
 
