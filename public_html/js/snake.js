@@ -11,7 +11,7 @@ var food;
 
 var context;
 var screenwidth;
-var screenheight;
+var screenheight;               
 
 var gameState;
 var gameOverMenu;
@@ -92,7 +92,7 @@ function gameLoop() {
 }
 
 function gameDraw() {
-    context.fillStyle = "rgb(147, 74, 148)";
+    context.fillStyle = "rgb(0, 4, 24)";
     context.fillRect(0, 0, screenWidth, screenHeight);
 }
 
@@ -126,7 +126,7 @@ function snakeInitialize() {
 
 function snakeDraw() {
     for (var index = 0; index < snake.length; index++) {
-        context.fillStyle = "white";
+        context.fillStyle = "blueviolet";
         context.fillRect(snake[index].x * snakeSize, snake[index].y * snakeSize, snakeSize, snakeSize);
     }
 }
@@ -173,7 +173,7 @@ function foodInitialize() {
 }
 
 function foodDraw() {
-    context.fillStyle = "white";
+    context.fillStyle = "blue";
     context.fillRect(food.x * snakeSize, food.y * snakeSize, snakeSize, snakeSize);
 }
 
